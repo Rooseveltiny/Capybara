@@ -1,0 +1,46 @@
+package capybara
+
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+)
+
+type Response[OutputDataType interface{}] struct {
+	OutputDataPath string         `json:"-"`
+	OutputData     OutputDataType `json:"output_data"`
+	Errors         []error        `json:"-"`
+	ErrorsString   []string       `json:"errors"`
+}
+
+func (r *Response[OutputDataType]) SaveResponse() {
+
+	r.ErrorsString = make([]string, 0)
+	for _, v := range r.Errors {
+		r.ErrorsString = append(r.ErrorsString, v.Error())
+	}
+
+	JsonB, _ := json.Marshal(r)
+
+	err := os.WriteFile(r.OutputDataPath, []byte(JsonB), 0755)
+	if err != nil {
+		fmt.Printf("Unable to write file: %v", err)
+	}
+
+}
+
+func (r *Response[OutputDataType]) SetResponseDataFilePath(filePath string) {
+	r.OutputDataPath = filePath
+}
+
+func (r *Response[OutputDataType]) SetResponseData(data OutputDataType) {
+	r.OutputData = data
+}
+
+func (r *Response[OutputDataType]) AppendError(err error) {
+	r.Errors = append(r.Errors, err)
+}
+
+func NewResponse[OutputData interface{}]() *Response[OutputData] {
+	return &Response[OutputData]{}
+}

@@ -1,0 +1,11 @@
+[INFO]: 2023-05-31 10:22:36 - test
+[INFO]: 2023-05-31 10:22:52 - test 1
+[INFO]: 2023-05-31 10:44:34 - test 1
+[INFO]: 2023-05-31 10:45:25 - test 1
+[INFO]: 2023-05-31 10:47:16 - test 1
+[ERROR]: 2023-05-31 11:47:26 - open read.go: no such file or directory
+[ERROR]: 2023-05-31 11:47:44 - open read.go: no such file or directory
+[ERROR]: 2023-05-31 11:49:29 - open '/Users/saveliytrifanenkov/Desktop/Проекты/Capybara/test_data/test_input_data.json': no such file or directory[ERROR]: 2023-05-31 13:33:26 - open '/Users/saveliytrifanenkov/Desktop/Проекты/Capybara/test_data/test_input_data.json': no such file or directory
+[INFO]: 2023-05-31 17:27:43 - test 1
+[INFO]: 2023-06-01 09:19:05 - test 1
+[INFO]: 2023-06-01 09:22:18 - test 1

@@ -1,0 +1,10 @@
+{
+    "user": {
+        "name": "Test user",
+        "link": "9e98d431-73f1-44b0-bbfd-408876abdb94"
+    },
+    "input_data": {
+        "feet_qnty": 10,
+        "name_of_dog": "Testy boy"
+    }
+}
