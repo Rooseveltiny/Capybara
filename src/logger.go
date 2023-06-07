@@ -24,7 +24,7 @@ func InitLogger() {
 		Level: logrus.InfoLevel,
 		Formatter: &easy.Formatter{
 			TimestampFormat: "2006-01-02 15:04:05",
-			LogFormat:       "[%lvl%]: %time% - %msg%\n",
+			LogFormat:       "[%lvl%]: %time% - %msg%\r\n",
 		},
 	}
 }
