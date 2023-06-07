@@ -17,6 +17,11 @@ type TestInputData struct {
 	NameOfDog string `json:"name_of_dog"`
 }
 
+type TestInputData2 struct {
+	Name    string `json:"name"`
+	Sername string `json:"sername"`
+}
+
 type TestOutputData struct {
 	SpongeColor     string   `json:"sponge_color"`
 	ColorsAvailable []string `json:"colors_available"`
@@ -28,8 +33,10 @@ type TestOutputDataResponse[OutputDataType any] struct {
 }
 
 var InputFilePath string = "/Users/saveliytrifanenkov/Desktop/Проекты/Capybara/test_data/test_input_data.json"
+var InputFilePath2 string = "/Users/saveliytrifanenkov/Desktop/Проекты/Capybara/test_data/test_input_data2.json"
 var OutputFilePath string = "/Users/saveliytrifanenkov/Desktop/Проекты/Capybara/test_data/test_output_data.json"
 var InputFilePathFlag string = fmt.Sprintf("-input_data_path=%s", InputFilePath)
+var InputFilePathFlag2 string = fmt.Sprintf("-input_data_path=%s", InputFilePath2)
 var OutputFilePathFlag string = fmt.Sprintf("-output_data_path=%s", OutputFilePath)
 
 func TestCapyLogger(t *testing.T) {
@@ -41,6 +48,16 @@ func TestCapyLogger(t *testing.T) {
 		fi, err = os.Stat("system_logging.log")
 		convey.So(err, convey.ShouldBeNil)
 		convey.So(size, convey.ShouldBeLessThan, fi.Size())
+	})
+}
+
+func TestRequst2(t *testing.T) {
+	convey.Convey("test req 2", t, func() {
+		os.Args = append(os.Args, InputFilePathFlag2)
+		os.Args = append(os.Args, OutputFilePathFlag)
+
+		req := NewRequest[TestInputData2]()
+		fmt.Println(req)
 	})
 }
 

@@ -23,3 +23,25 @@
 [INFO]: 2023-06-07 14:35:49 - starting to write file
 [ERROR]: 2023-06-07 14:36:00 - new error occured
 [INFO]: 2023-06-07 14:36:00 - starting to write file
+[INFO]: 2023-06-07 22:01:25 - {
+    "user": {
+        "name": "Test user",
+        "link": "9e98d431-73f1-44b0-bbfd-408876abdb94"
+    },
+    "input_data": {
+        "feet_qnty": 10,
+        "name_of_dog": "Testy boy"
+    }
+}
+[ERROR]: 2023-06-07 22:18:35 - open : no such file or directory
+[ERROR]: 2023-06-07 22:19:56 - open : no such file or directory
+[INFO]: 2023-06-07 22:21:39 - test 1
+[ERROR]: 2023-06-07 22:21:39 - error occured! code of an error: 1456
+[ERROR]: 2023-06-07 22:21:39 - error occured! code of an error: 8888
+[ERROR]: 2023-06-07 22:21:39 - error occured! code of an error: 3264
+[ERROR]: 2023-06-07 22:22:05 - new error occured
+[INFO]: 2023-06-07 22:22:09 - test 1
+[ERROR]: 2023-06-07 22:22:09 - error occured! code of an error: 1456
+[ERROR]: 2023-06-07 22:22:09 - error occured! code of an error: 8888
+[ERROR]: 2023-06-07 22:22:09 - error occured! code of an error: 3264
+[ERROR]: 2023-06-07 22:22:25 - new error occured

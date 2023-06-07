@@ -26,8 +26,10 @@ func (r *Request[InputDataType]) readInputData() {
 		CapyLogger.Errorln(err)
 		return
 	}
-	CapyLogger.Infoln(string(b))
-	json.Unmarshal(b, &r)
+	errJson := json.Unmarshal(b, &r)
+	if errJson != nil {
+		CapyLogger.Errorln(errJson)
+	}
 }
 
 func (r *Request[InputDataType]) initDataPaths() {
