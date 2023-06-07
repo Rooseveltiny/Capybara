@@ -14,6 +14,7 @@ type Response[OutputDataType interface{}] struct {
 
 func (r *Response[OutputDataType]) SaveResponse() {
 
+	CapyLogger.Infoln(r.OutputDataPath)
 	r.ErrorsString = make([]string, 0)
 	for _, v := range r.Errors {
 		r.ErrorsString = append(r.ErrorsString, v.Error())
