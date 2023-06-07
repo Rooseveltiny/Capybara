@@ -26,6 +26,7 @@ func (r *Request[InputDataType]) readInputData() {
 		CapyLogger.Errorln(err)
 		return
 	}
+	CapyLogger.Infoln(b)
 	json.Unmarshal(b, &r)
 }
 
