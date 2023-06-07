@@ -38,6 +38,7 @@ func (r *Response[OutputDataType]) SetResponseData(data OutputDataType) {
 }
 
 func (r *Response[OutputDataType]) AppendError(err error) {
+	CapyLogger.Errorln(err)
 	r.Errors = append(r.Errors, err)
 }
 

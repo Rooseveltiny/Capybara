@@ -1,4 +1,4 @@
-module capybara
+module github.com/Rooseveltiny/capybara
 
 go 1.20
 

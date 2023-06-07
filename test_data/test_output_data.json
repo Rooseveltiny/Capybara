@@ -1,13 +1,1 @@
-{
-    "output_data": {
-        "sponge_color": "blue",
-        "colors_available": [
-            "orange",
-            "brown",
-            "violet"
-        ]
-    },
-    "errors": [
-        "new error occured"
-    ]
-}
+{"output_data":{"sponge_color":"blue","colors_available":["orange","brown","violet"]},"errors":["new error occured"]}
