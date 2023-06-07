@@ -2,7 +2,6 @@ package capybara
 
 import (
 	"encoding/json"
-	"fmt"
 	"os"
 )
 
@@ -24,7 +23,7 @@ func (r *Response[OutputDataType]) SaveResponse() {
 
 	err := os.WriteFile(r.OutputDataPath, []byte(JsonB), 0755)
 	if err != nil {
-		fmt.Printf("Unable to write file: %v", err)
+		CapyLogger.Errorln(err)
 	}
 
 }
