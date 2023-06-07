@@ -25,6 +25,7 @@ func (r *Response[OutputDataType]) SaveResponse() {
 
 	err := os.WriteFile(r.OutputDataPath, []byte(JsonB), 0755)
 	if err != nil {
+		CapyLogger.Infoln(r.OutputDataPath)
 		CapyLogger.Errorln(err)
 	}
 
