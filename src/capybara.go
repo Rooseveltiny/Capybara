@@ -6,7 +6,9 @@ type CapybaraSession[InputDataType, OutputDataType any] struct {
 }
 
 func (cs *CapybaraSession[InputDataType, OutputDataType]) AppendError(err error) {
-	cs.Response.AppendError(err)
+	if err != nil {
+		cs.Response.AppendError(err)
+	}
 }
 
 func (cs *CapybaraSession[InputDataType, OutputDataType]) SetOutputData(data OutputDataType) {

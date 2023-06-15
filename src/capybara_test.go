@@ -146,6 +146,7 @@ func TestCapybaraSession(t *testing.T) {
 			capybara.SetOutputData(od)
 			convey.So(capybara.Response.OutputData, convey.ShouldResemble, od)
 			capybara.AppendError(errors.New("new error occured"))
+			capybara.AppendError(nil)
 			convey.So(len(capybara.Response.Errors), convey.ShouldEqual, 1)
 			convey.Convey("test saving response", func() {
 				capybara.SaveResponse()
